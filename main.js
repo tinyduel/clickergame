@@ -18,6 +18,6 @@ function buyKeyboard() {
 
 window.setInterval(function(){
 	
-	cookieClick(cursors);
+	cookieClick(keyboard);
 	
 }, 1000);
