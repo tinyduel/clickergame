@@ -1,6 +1,6 @@
 var cookies = 0;
 var keyboard = 0;
-var keyboardCost = 0;
+var keyboardCost = 10;
 function cookieClick(number) {
   cookies = cookies + number
   document.getElementById("cookies").innerHTML = cookies;
