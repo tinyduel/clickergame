@@ -9,6 +9,7 @@ function buyKeyboard() {
   if (cookies >= keyboardCost) {
     keyboard = keyboard + 1
     cookies = cookies - keyboardCost
+    keyboardCost = keyboardCost + keyboard
     document.getElementById("cookies").innerHTML = cookies;
     document.getElementById("keyboard").innerHTML = keyboard;
     document.getElementById("keyboardCost").innerHTML = keyboardCost;
