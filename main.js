@@ -15,3 +15,9 @@ function buyKeyboard() {
     document.getElementById("keyboardCost").innerHTML = keyboardCost;
   };
 };
+
+window.setInterval(function(){
+	
+	cookieClick(cursors);
+	
+}, 1000);
