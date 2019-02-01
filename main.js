@@ -1,5 +1,7 @@
 var cookies = 0;
 var keyboard = 0;
+var stocks = 0
+var stocksPrice = 0
 function cookieClick(number) {
   cookies = cookies + number
   document.getElementById("cookies").innerHTML = cookies;
@@ -36,6 +38,23 @@ function load() {
 	var keyboardCost = Math.floor(10 * Math.pow(1.1,keyboard));
 	document.getElementById("cookies").innerHTML = cookies;
 	document.getElementById("keyboard").innerHTML = keyboard;
-  	document.getElementById("keyboardCost").innerHTML = keyboardCost;
+  document.getElementById("keyboardCost").innerHTML = keyboardCost;
 };
+function getRndInt(min, max) {
+  return Math.floor(Math.random() * (max - min + 1) ) + min;
+}
+function stocksUpdate() {
+	if (getRndInt(0,1) === 1) {
+		stockPrice = stockPrice + getRndInt(0,5);
+		document.getElementById("stockPrice").innerHTML = stockPrice;
+	} else {
+		stockPrice = stockPrice + getRndInt(0,-5);
+		document.getElementById("stockPrice").innerHTML = stockPrice;
 
+	};
+};
+window.setInterval(function(){
+	
+	stocksUpdate();
+	
+}, 5000);
