@@ -21,3 +21,19 @@ window.setInterval(function(){
 	cookieClick(keyboard);
 	
 }, 1000);
+function save() {
+	 var save = {
+    cookies: cookies,
+    keyboard: keyboard,
+    keyboardCost: keyboardCost
+	}
+	 localStorage.setItem("save",JSON.stringify(save));
+};
+
+function load() {
+	var savegame = JSON.parse(localStorage.getItem("save"));
+  if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
+	if (typeof savegame.keyboard !== "undefined") keyboard = savegame.keyboard;
+	if (typeof savegame.keyboardCost !== "undefined") keyboardCost = savegame.keyboardCost;
+};
+
