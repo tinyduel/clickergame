@@ -37,6 +37,6 @@ function load() {
 	if (typeof savegame.keyboardCost !== "undefined") keyboardCost = savegame.keyboardCost;
 	document.getElementById("cookies").innerHTML = cookies;
 	document.getElementById("keyboard").innerHTML = keyboard;
-  document.getElementById("keyboardCost").innerHTML = keyboardCost;
+  	document.getElementById("keyboardCost").innerHTML = keyboardCost;
 };
 
