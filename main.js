@@ -72,7 +72,7 @@ window.setInterval(function(){
 	
 }, 2000);
 function stockBuy() {
-	var stocksAmount = document.getElementById("amount").value;
+	var stocksAmount = parseInt(document.getElementById("amount").value);
 	if (cookies >= stockPrice * stocksAmount) {
 		cookies = cookies - stockPrice * stocksAmount;
 		stocks = stocks + stocksAmount;
