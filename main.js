@@ -48,7 +48,7 @@ function stocksUpdate() {
 	if (rnd === 1) {
 		stockPrice = stockPrice + getRndInt(0,5);
 		document.getElementById("stockPrice").innerHTML = stockPrice;
-	} elif (rnd === 0) {
+	} else if (rnd === 0) {
 		stockPrice = stockPrice + getRndInt(0,-5);
 		document.getElementById("stockPrice").innerHTML = stockPrice;
 
