@@ -59,7 +59,7 @@ function stocksUpdate() {
 
 	};
 	if (stockPrice < 1) {
-		stockPrice = 3
+		stockPrice = 5
 		stocks = 0
 		document.getElementById("cookies").innerHTML = cookies;
 		document.getElementById("stocks").innerHTML = stocks;
