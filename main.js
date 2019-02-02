@@ -83,9 +83,16 @@ function stockBuy() {
 function stockSell() {
 	var stocksAmount = document.getElementById("amount").value;
 	if (stocks >= 1) {
-		cookies = cookies + stockPrice
-		stocks = stocks - 1
-		document.getElementById("cookies").innerHTML = cookies;
-		document.getElementById("stocks").innerHTML = stocks;
+		if (stocksAmount > stocks) {
+			cookies = cookies + stockPrice * stocks;
+			stocks = stocks - stocks;
+			document.getElementById("cookies").innerHTML = cookies;
+			document.getElementById("stocks").innerHTML = stocks;
+		} else {
+			cookies = cookies + stockPrice * stocksAmount;
+			stocks = stocks - stocksAmount;
+			document.getElementById("cookies").innerHTML = cookies;
+			document.getElementById("stocks").innerHTML = stocks;
+		};
 	};
 };
