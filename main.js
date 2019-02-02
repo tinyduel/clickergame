@@ -72,14 +72,16 @@ window.setInterval(function(){
 	
 }, 2000);
 function stockBuy() {
-	if (cookies >= stockPrice) {
-		cookies = cookies - stockPrice;
-		stocks = stocks + 1
+	var stocksAmount = document.getElementById("amount").value;
+	if (cookies >= stockPrice * stocksAmount) {
+		cookies = cookies - stockPrice * stocksAmount;
+		stocks = stocks + stocksAmount;
 		document.getElementById("cookies").innerHTML = cookies;
 		document.getElementById("stocks").innerHTML = stocks;
 	};
 };
 function stockSell() {
+	var stocksAmount = document.getElementById("amount").value;
 	if (stocks >= 1) {
 		cookies = cookies + stockPrice
 		stocks = stocks - 1
