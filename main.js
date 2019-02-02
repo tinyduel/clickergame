@@ -25,16 +25,21 @@ window.setInterval(function(){
 }, 1000);
 function save() {
 	 var save = {
-    cookies: cookies,
-    keyboard: keyboard,
+    		cookies: cookies,
+    		keyboard: keyboard,
+		stocks: stocks,
+		stockPrice: stockPrice
+
 	}
 	 localStorage.setItem("save",JSON.stringify(save));
 };
 
 function load() {
 	var savegame = JSON.parse(localStorage.getItem("save"));
-  if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
+	if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
 	if (typeof savegame.keyboard !== "undefined") keyboard = savegame.keyboard;
+	if (typeof savegame.stocks !== "undefined") stocks = savegame.stocks;
+	if (typeof savegame.stockPrice !== "undefined") stockPrice = savegame.stockPrice;
 	var keyboardCost = Math.floor(10 * Math.pow(1.1,keyboard));
 	document.getElementById("cookies").innerHTML = cookies;
 	document.getElementById("keyboard").innerHTML = keyboard;
