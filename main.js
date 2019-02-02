@@ -60,9 +60,9 @@ function stocksUpdate() {
 	};
 	if (stockPrice < 1) {
 		stockPrice = 5
-		stocks = 0
-		document.getElementById("cookies").innerHTML = cookies;
-		document.getElementById("stocks").innerHTML = stocks;
+	//	stocks = 0
+	//	document.getElementById("cookies").innerHTML = cookies;
+	//	document.getElementById("stocks").innerHTML = stocks;
 		document.getElementById("stockPrice").innerHTML = stockPrice;
 	};
 };
