@@ -58,3 +58,19 @@ window.setInterval(function(){
 	stocksUpdate();
 	
 }, 5000);
+function stockBuy() {
+	if (cookies >= stockPrice) {
+		cookies = cookies - stockPrice;
+		stocks = stocks + 1
+		document.getElementById("cookies").innerHTML = cookies;
+		document.getElementById("stocks").innerHTML = stocks;
+	};
+};
+function stockSell() {
+	if (stocks >= 1) {
+		cookies = cookies + stockPrice
+		stocks = stocks + 1
+		document.getElementById("cookies").innerHTML = cookies;
+		document.getElementById("stocks").innerHTML = stocks;
+	};
+};
