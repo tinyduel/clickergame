@@ -1,7 +1,7 @@
 var cookies = 0;
 var keyboard = 0;
 var stocks = 0
-var stocksPrice = 0
+var stockPrice = 0
 function cookieClick(number) {
   cookies = cookies + number
   document.getElementById("cookies").innerHTML = cookies;
