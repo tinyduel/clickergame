@@ -53,7 +53,7 @@ function stocksUpdate() {
 		document.getElementById("stockPrice").innerHTML = stockPrice;
 
 	};
-	if (stockPrice < 0) {
+	if (stockPrice < 1) {
 		stockPrice = 3
 		stocks = 0
 		document.getElementById("cookies").innerHTML = cookies;
@@ -65,7 +65,7 @@ window.setInterval(function(){
 	
 	stocksUpdate();
 	
-}, 5000);
+}, 2000);
 function stockBuy() {
 	if (cookies >= stockPrice) {
 		cookies = cookies - stockPrice;
