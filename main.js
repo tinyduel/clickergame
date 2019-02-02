@@ -5,13 +5,13 @@ var stockPrice = 0
 var debug = 0
 function cookieClick(number) {
 	if (debug = 1) {
-  	document.getElementById("cookie").onkeydown = function(e){
-  	if (e.which == 13) //13 is the keycode referring to enter.
-   	 {
-    	   e.preventDefault(); //this will prevent the intended purpose of the event. 
-    	   return false; //return false on the event.
-   	 }
-  }
+  		document.getElementById("cookie").onkeydown = function(e){
+  		if (e.which == 13) //13 is the keycode referring to enter.
+   	 	{
+    	 	  e.preventDefault(); //this will prevent the intended purpose of the event. 
+    	 	  return false; //return false on the event.
+   		 }
+  	 }
   cookies = cookies + number
   document.getElementById("cookies").innerHTML = cookies;
 };
