@@ -44,10 +44,11 @@ function getRndInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 function stocksUpdate() {
-	if (getRndInt(0,1) === 1) {
+	var rnd = getRndInt(0,2)
+	if (rnd === 1) {
 		stockPrice = stockPrice + getRndInt(0,5);
 		document.getElementById("stockPrice").innerHTML = stockPrice;
-	} else {
+	} elif (rnd === 0) {
 		stockPrice = stockPrice + getRndInt(0,-5);
 		document.getElementById("stockPrice").innerHTML = stockPrice;
 
