@@ -52,6 +52,13 @@ function stocksUpdate() {
 		document.getElementById("stockPrice").innerHTML = stockPrice;
 
 	};
+	if (stockPrice < 0) {
+		stockPrice = 3
+		stocks = 0
+		document.getElementById("cookies").innerHTML = cookies;
+		document.getElementById("stocks").innerHTML = stocks;
+		document.getElementById("stockPrice").innerHTML = stockPrice;
+	};
 };
 window.setInterval(function(){
 	
