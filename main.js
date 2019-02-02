@@ -69,7 +69,7 @@ function stockBuy() {
 function stockSell() {
 	if (stocks >= 1) {
 		cookies = cookies + stockPrice
-		stocks = stocks + 1
+		stocks = stocks - 1
 		document.getElementById("cookies").innerHTML = cookies;
 		document.getElementById("stocks").innerHTML = stocks;
 	};
