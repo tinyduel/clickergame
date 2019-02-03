@@ -80,8 +80,8 @@ window.setInterval(function(){
 }, 2000);
 function stockBuy() {
 	var stocksAmount = parseInt(document.getElementById("amount").value);
-	if (cookies >= stockPrice * stocksAmount) {
-		cookies = cookies - stockPrice * stocksAmount;
+	if (cookies >= stockPrice * stocksAmount + 5) {
+		cookies = cookies - stockPrice * stocksAmount + 5;
 		stocks = stocks + stocksAmount;
 		document.getElementById("cookies").innerHTML = cookies;
 		document.getElementById("stocks").innerHTML = stocks;
