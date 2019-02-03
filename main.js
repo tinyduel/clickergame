@@ -72,6 +72,7 @@ function stocksUpdate() {
 	//	document.getElementById("stocks").innerHTML = stocks;
 		document.getElementById("stockPrice").innerHTML = stockPrice;
 	};
+	document.getElementById("stocksCost").innerHTML = stockPrice + 5;
 };
 window.setInterval(function(){
 	
