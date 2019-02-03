@@ -56,7 +56,7 @@ function getRndInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 function stocksUpdate() {
-	var rnd = getRndInt(0,2)
+	var rnd = getRndInt(0,1)
 	if (rnd === 1) {
 		stockPrice = stockPrice + getRndInt(0,5);
 		document.getElementById("stockPrice").innerHTML = stockPrice;
@@ -77,7 +77,7 @@ window.setInterval(function(){
 	
 	stocksUpdate();
 	
-}, 2000);
+}, 1000);
 function stockBuy() {
 	var stocksAmount = parseInt(document.getElementById("amount").value);
 	if (cookies >= (stockPrice + 5) * stocksAmount) {
