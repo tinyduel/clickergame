@@ -116,3 +116,8 @@ function stockSell() {
 		};
 	};
 };
+function buyClicks() {
+	var clickCost = Math.floor(10 * Math.pow(1.1,clicks));
+	if (cookies >= clicksCost) {
+		cookies = cookies - clicksCost;
+		clicks = clicks + 1;
