@@ -4,6 +4,7 @@ var stocks = 0
 var stockPrice = 0
 var debug = 0
 var clicks = 1
+var clickCost = 7
 function cookiePress(number) {
 	document.getElementById("cookie").onkeydown = function(e){
   	if (e.which == 13) { //13 is the keycode referring to enter.
