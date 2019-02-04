@@ -3,6 +3,17 @@ var keyboard = 0;
 var stocks = 0
 var stockPrice = 0
 var debug = 0
+var clicks = 1
+function cookiePress(number) {
+	document.getElementById("cookie").onkeydown = function(e){
+  	if (e.which == 13) { //13 is the keycode referring to enter.
+   		e.preventDefault(); //this will prevent the intended purpose of the event. 
+    		return false; //return false on the event.
+   		}
+	}
+	cookies = cookies + number;
+	document.getElementById("cookies").innerHTML = cookies;
+};
 function cookieClick(number) {
 	document.getElementById("cookie").onkeydown = function(e){
   	if (e.which == 13) { //13 is the keycode referring to enter.
@@ -10,7 +21,7 @@ function cookieClick(number) {
     		return false; //return false on the event.
    		}
 	}
-	cookies = cookies + number
+	cookies = cookies + (number * clicks);
 	document.getElementById("cookies").innerHTML = cookies;
 };
 function buyKeyboard() {
@@ -27,7 +38,7 @@ function buyKeyboard() {
 
 window.setInterval(function(){
 	
-	cookieClick(keyboard);
+	cookiePress(keyboard);
 	
 }, 1000);
 function save() {
