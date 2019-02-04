@@ -125,6 +125,6 @@ function buyClicks() {
 		var clickCost = Math.floor(10 * Math.pow(1.1,clicks));
 	document.getElementById("cookies").innerHTML = cookies;
 	document.getElementById("clicks").innerHTML = clicks;
-	document.getElementById("clicksCost").innerHTML = clicksCost;
+	document.getElementById("clicksCost").innerHTML = clickCost;
 	}
 };
