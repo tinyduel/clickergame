@@ -122,7 +122,7 @@ function buyClicks() {
 	if (cookies >= clickCost) {
 		cookies = cookies - clickCost;
 		clicks = clicks + 1;
-		var clickCost = Math.floor(10 * Math.pow(0.7,clicks));
+		var clickCost = Math.floor(10 * Math.pow(1.7,clicks));
 	document.getElementById("cookies").innerHTML = cookies;
 	document.getElementById("clicks").innerHTML = clicks;
 	document.getElementById("clicksCost").innerHTML = clickCost;
