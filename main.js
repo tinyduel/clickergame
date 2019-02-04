@@ -119,8 +119,8 @@ function stockSell() {
 };
 function buyClicks() {
 	var clickCost = Math.floor(10 * Math.pow(0.7,clicks));
-	if (cookies >= clicksCost) {
-		cookies = cookies - clicksCost;
+	if (cookies >= clickCost) {
+		cookies = cookies - clickCost;
 		clicks = clicks + 1;
 		var clickCost = Math.floor(10 * Math.pow(0.7,clicks));
 	document.getElementById("cookies").innerHTML = cookies;
