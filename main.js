@@ -118,11 +118,11 @@ function stockSell() {
 	};
 };
 function buyClicks() {
-	var clickCost = Math.floor(10 * Math.pow(1.1,clicks));
+	var clickCost = Math.floor(10 * Math.pow(0.7,clicks));
 	if (cookies >= clicksCost) {
 		cookies = cookies - clicksCost;
 		clicks = clicks + 1;
-		var clickCost = Math.floor(10 * Math.pow(1.1,clicks));
+		var clickCost = Math.floor(10 * Math.pow(0.7,clicks));
 	document.getElementById("cookies").innerHTML = cookies;
 	document.getElementById("clicks").innerHTML = clicks;
 	document.getElementById("clicksCost").innerHTML = clickCost;
