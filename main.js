@@ -47,7 +47,9 @@ function save() {
     		cookies: cookies,
     		keyboard: keyboard,
 		stocks: stocks,
-		stockPrice: stockPrice
+		stockPrice: stockPrice,
+		clicks: clicks,
+		clickCost: clickCost,
 
 	}
 	 localStorage.setItem("save",JSON.stringify(save));
@@ -58,11 +60,17 @@ function load() {
 	if (typeof savegame.cookies !== "undefined") cookies = savegame.cookies;
 	if (typeof savegame.keyboard !== "undefined") keyboard = savegame.keyboard;
 	if (typeof savegame.stocks !== "undefined") stocks = savegame.stocks;
+	if (typeof savegame.clicks !== "undefined") clicks = savegame.clicks;
 	if (typeof savegame.stockPrice !== "undefined") stockPrice = savegame.stockPrice;
+	if (typeof savegame.clickCost !== "undefined") clickCost = savegame.clickCost;
 	var keyboardCost = Math.floor(10 * Math.pow(1.1,keyboard));
 	document.getElementById("cookies").innerHTML = cookies;
 	document.getElementById("keyboard").innerHTML = keyboard;
-  document.getElementById("keyboardCost").innerHTML = keyboardCost;
+  	document.getElementById("keyboardCost").innerHTML = keyboardCost;
+	document.getElementById("clicks").innerHTML = clicks;
+	document.getElementById("clicksCost").innerHTML = clickCost;
+
+
 };
 function getRndInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
