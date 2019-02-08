@@ -86,9 +86,8 @@ function stocksUpdate() {
 
 	} else if (rnd === 2)
 		if (getRndInt(1,5) === 5) {
-			stockPrice = stockPrice - getRndInt(30,50);
+			stockPrice = stockPrice - getRndInt(30,50)
 		}
-	};
 	if (stockPrice < 1) {
 		stockPrice = 5
 	//	stocks = 0
