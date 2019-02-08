@@ -78,10 +78,10 @@ function getRndInt(min, max) {
 function stocksUpdate() {
 	var rnd = getRndInt(0,2)
 	if (rnd === 1) {
-		stockPrice = stockPrice + getRndInt(0,5);
+		stockPrice = stockPrice + getRndInt(1,5);
 		document.getElementById("stockPrice").innerHTML = stockPrice;
 	} else if (rnd === 0) {
-		stockPrice = stockPrice + getRndInt(0,-5);
+		stockPrice = stockPrice + getRndInt(-1,-5);
 		document.getElementById("stockPrice").innerHTML = stockPrice;
 
 	} else if (rnd === 2)
