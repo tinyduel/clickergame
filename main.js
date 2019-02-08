@@ -100,6 +100,11 @@ window.setInterval(function(){
 	stocksUpdate();
 	
 }, 1000);
+window.setInterval(function(){
+	
+	save();
+	
+}, 60000);
 function stockBuy() {
 	var stocksAmount = parseInt(document.getElementById("amount").value);
 	if (cookies >= (stockPrice + 5) * stocksAmount) {
