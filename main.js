@@ -76,7 +76,7 @@ function getRndInt(min, max) {
   return Math.floor(Math.random() * (max - min + 1) ) + min;
 }
 function stocksUpdate() {
-	var rnd = getRndInt(0,1)
+	var rnd = getRndInt(0,2)
 	if (rnd === 1) {
 		stockPrice = stockPrice + getRndInt(0,5);
 		document.getElementById("stockPrice").innerHTML = stockPrice;
@@ -84,6 +84,10 @@ function stocksUpdate() {
 		stockPrice = stockPrice + getRndInt(0,-5);
 		document.getElementById("stockPrice").innerHTML = stockPrice;
 
+	} else if (rnd === 2)
+		if (getRndInt(1,5) === 5) {
+			stockPrice = stockPrice - getRndInt(30,50);
+		}
 	};
 	if (stockPrice < 1) {
 		stockPrice = 5
